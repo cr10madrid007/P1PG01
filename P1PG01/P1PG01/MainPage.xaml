@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P1PG01.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="15" CornerRadius="0">
+            <Label Text="Primer Ejemplo" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Entry Keyboard="Plain"
+                Placeholder="Ingrese su nombre"
+                VerticalOptions="CenterAndExpand" x:Name="txtNombre" />
+
+        <Entry Keyboard="Numeric"
+                Placeholder="Ingrese su Edad"
+                VerticalOptions="CenterAndExpand" x:Name="txtEdad"/>
+
+       
+        
+        <Picker Title="Seleccione su ocupación" 
+             TitleColor="LightSteelBlue" x:Name="txtOcupacion">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Ing En Sistemas</x:String>
+                    <x:String>Ing Electrico</x:String>
+                    <x:String>Ing Quimico</x:String>
+                    
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Entry Keyboard="Plain"
+                Placeholder="Pais"
+                VerticalOptions="CenterAndExpand" x:Name="txtPais"/>
+
+        <Button Text="Ir a segunda Pagina" x:Name="btnPagina" Clicked="btnPagina_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
