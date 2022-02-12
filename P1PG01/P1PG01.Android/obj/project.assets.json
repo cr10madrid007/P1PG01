@@ -104,6 +104,34 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "Xam.Plugin.Media/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.1.0",
+          "Xamarin.Essentials": "1.5.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Plugin.Media.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Plugin.Media.dll": {}
+        }
+      },
+      "Xam.Plugins.TextToSpeech/4.0.0.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/Plugin.TextToSpeech.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/Plugin.TextToSpeech.dll": {}
+        }
+      },
       "Xamarin.AndroidX.Activity/1.2.4.1": {
         "type": "package",
         "dependencies": {
@@ -1637,6 +1665,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
@@ -1837,6 +1867,72 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugin.Media/5.0.1": {
+      "sha512": "UUR31EEnhDVa4IXgVfQIAL3u9v6YAyppsb5UlO9MNJ4quGGkfcWX++JexjB1nMGqvCzsjAT2t32drKDIXoW4SQ==",
+      "type": "package",
+      "path": "xam.plugin.media/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Plugin.Media.dll",
+        "lib/monoandroid10.0/Plugin.Media.pdb",
+        "lib/monoandroid10.0/Plugin.Media.xml",
+        "lib/monoandroid80/Plugin.Media.dll",
+        "lib/monoandroid80/Plugin.Media.pdb",
+        "lib/monoandroid80/Plugin.Media.xml",
+        "lib/monoandroid81/Plugin.Media.dll",
+        "lib/monoandroid81/Plugin.Media.pdb",
+        "lib/monoandroid81/Plugin.Media.xml",
+        "lib/monoandroid90/Plugin.Media.dll",
+        "lib/monoandroid90/Plugin.Media.pdb",
+        "lib/monoandroid90/Plugin.Media.xml",
+        "lib/netstandard1.0/Plugin.Media.dll",
+        "lib/netstandard1.0/Plugin.Media.pdb",
+        "lib/netstandard1.0/Plugin.Media.xml",
+        "lib/netstandard2.0/Plugin.Media.dll",
+        "lib/netstandard2.0/Plugin.Media.pdb",
+        "lib/netstandard2.0/Plugin.Media.xml",
+        "lib/tizen40/Plugin.Media.dll",
+        "lib/tizen40/Plugin.Media.pdb",
+        "lib/tizen40/Plugin.Media.xml",
+        "lib/uap10.0.16299/Plugin.Media.dll",
+        "lib/uap10.0.16299/Plugin.Media.pdb",
+        "lib/uap10.0.16299/Plugin.Media.pri",
+        "lib/uap10.0.16299/Plugin.Media.xml",
+        "lib/xamarinios10/Plugin.Media.dll",
+        "lib/xamarinios10/Plugin.Media.pdb",
+        "lib/xamarinios10/Plugin.Media.xml",
+        "readme.txt",
+        "xam.plugin.media.5.0.1.nupkg.sha512",
+        "xam.plugin.media.nuspec"
+      ]
+    },
+    "Xam.Plugins.TextToSpeech/4.0.0.7": {
+      "sha512": "XFf3HBQCeFetL8cEEcKkinqZ1d2L3XYQLhj83gPTIsWVsXoOQWKOyjRs9ZmDBuwWwNvVt5wlKHY+zpWXfeJJZw==",
+      "type": "package",
+      "path": "xam.plugins.texttospeech/4.0.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.TextToSpeech.dll",
+        "lib/monoandroid71/Plugin.TextToSpeech.xml",
+        "lib/netstandard1.0/Plugin.TextToSpeech.dll",
+        "lib/netstandard1.0/Plugin.TextToSpeech.xml",
+        "lib/netstandard2.0/Plugin.TextToSpeech.dll",
+        "lib/netstandard2.0/Plugin.TextToSpeech.xml",
+        "lib/uap10.0.15063/Plugin.TextToSpeech.dll",
+        "lib/uap10.0.15063/Plugin.TextToSpeech.pri",
+        "lib/uap10.0.15063/Plugin.TextToSpeech.xml",
+        "lib/xamarinios10/Plugin.TextToSpeech.dll",
+        "lib/xamarinios10/Plugin.TextToSpeech.xml",
+        "lib/xamarinmac20/Plugin.TextToSpeech.dll",
+        "lib/xamarinmac20/Plugin.TextToSpeech.xml",
+        "lib/xamarintvos10/Plugin.TextToSpeech.dll",
+        "lib/xamarintvos10/Plugin.TextToSpeech.xml",
+        "xam.plugins.texttospeech.4.0.0.7.nupkg.sha512",
+        "xam.plugins.texttospeech.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.2.4.1": {
@@ -3402,6 +3498,8 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v12.0": [
       "P1PG01 >= 1.0.0",
+      "Xam.Plugin.Media >= 5.0.1",
+      "Xam.Plugins.TextToSpeech >= 4.0.0.7",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196",
       "sqlite-net-pcl >= 1.8.116"
@@ -3449,6 +3547,14 @@
     "frameworks": {
       "monoandroid12.0": {
         "dependencies": {
+          "Xam.Plugin.Media": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          },
+          "Xam.Plugins.TextToSpeech": {
+            "target": "Package",
+            "version": "[4.0.0.7, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"

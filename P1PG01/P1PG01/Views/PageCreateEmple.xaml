@@ -4,7 +4,7 @@
              x:Class="P1PG01.Views.PageCreateEmple">
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="Codigo" Placeholder="Codigo" Text="{Binding codigo}" IsEnabled="False"/>
+            <Entry x:Name="Codigo" Placeholder="Codigo" Text="{Binding codigo}" />
             <Entry x:Name="Nombres" Placeholder="Nombre" Text="{Binding nombres}"  />
             <Entry x:Name="Apellidos" Placeholder="Apellidos" Text="{Binding apellidos}" />
             <Entry x:Name="Edad" Placeholder="Edad" Keyboard="Numeric" Text="{Binding edad}"/>
@@ -13,7 +13,7 @@
 
             <Grid ColumnDefinitions="*,*">
                 <Button x:Name="btnAgregar" Text="Agregar" Clicked="btnAgregar_Clicked" />
-                <Button Grid.Column="1" x:Name="btnBorrar" Text="Agregar" Clicked="btnBorrar_Clicked" />
+                <Button Grid.Column="1" x:Name="btnBorrar" Text="Borrar" Clicked="btnBorrar_Clicked" />
                 
             </Grid>
 

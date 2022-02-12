@@ -39,10 +39,7 @@ namespace P1PG01.Views
             await Navigation.PopAsync();
         }
 
-        private void btnActualizar_Clicked(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnBorrar_Clicked(object sender, EventArgs e)
         {

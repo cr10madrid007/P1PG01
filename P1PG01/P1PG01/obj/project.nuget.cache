@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7EzFwqkbEVk9o9NASiQT5lwzglhZ8JAfsdbZ9Tw1W2Mw09mpIKhM30wWS2Yrq5P6qpO0lUSlYvuYNRwe5vYiYw==",
+  "dgSpecHash": "vFgONGlqEazwjGxtC1tZhxl3pjBckhdNtgNc3Hir8xCyoRfIlNUDIfreQQc6qT7/WjiVRIlTZs8XkL9vSARQgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\crist\\source\\repos\\P1PG01\\P1PG01\\P1PG01\\P1PG01.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,8 @@
     "C:\\Users\\crist\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\crist\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\crist\\.nuget\\packages\\xam.plugins.texttospeech\\4.0.0.7\\xam.plugins.texttospeech.4.0.0.7.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],

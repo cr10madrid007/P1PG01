@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dJ8HdA/djwZ+1HM14QqbdxEzn7tS9f5v+SM2QaDpzaKkIvGULCo8XwiqnlQaagAEFZe2BnsbJlJxCW7X6WunTA==",
+  "dgSpecHash": "LI9i95onerqMeC980ZmFCEiBblV6I1XyKCBPJaw7p0JFskk4QAY9+cZk4TnU3K1ZT3s1NclFAdizS3ckBr0GVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\crist\\source\\repos\\P1PG01\\P1PG01\\P1PG01.Android\\P1PG01.Android.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\crist\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\crist\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\crist\\.nuget\\packages\\xam.plugins.texttospeech\\4.0.0.7\\xam.plugins.texttospeech.4.0.0.7.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\crist\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",

@@ -5,6 +5,8 @@ public class MonoPackageManager_Resources {
 		"P1PG01.Android.dll",
 		"FormsViewGroup.dll",
 		"P1PG01.dll",
+		"Plugin.Media.dll",
+		"Plugin.TextToSpeech.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

@@ -4,8 +4,14 @@
              x:Class="P1PG01.Views.EmplePage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Agregar"
+         <ToolbarItem Text="Agregar"
                      Clicked="ToolbarItem_Clicked" />
+
+        <ToolbarItem Text="Photo"
+                     Clicked="ToolbarItem_Clicked_1" />
+
+        <ToolbarItem Text="Voz"
+                     Clicked="ToolbarItem_Clicked_2"/> 
     </ContentPage.ToolbarItems>
     
     

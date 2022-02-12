@@ -42,6 +42,14 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Xam.Plugins.TextToSpeech": {
+              "target": "Package",
+              "version": "[4.0.0.7, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -103,6 +111,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Xam.Plugins.TextToSpeech": {
+              "target": "Package",
+              "version": "[4.0.0.7, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

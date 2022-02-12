@@ -38,5 +38,18 @@ namespace P1PG01.Views
             newpage.BindingContext = item;
             await Navigation.PushAsync(newpage);
         }
+
+        private async void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        {
+            var newpage = new Views.PhotoPage();
+            await Navigation.PushAsync(newpage);
+        }
+
+        private async void ToolbarItem_Clicked_2(object sender, EventArgs e)
+        {
+            var newpage = new Views.PageTTS();
+            await Navigation.PushAsync(newpage);
+
+        }
     }
 }
