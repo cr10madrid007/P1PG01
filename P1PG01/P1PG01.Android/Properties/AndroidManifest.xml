@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.p1pg01">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
     <application android:label="P1PG01.Android" android:theme="@style/MainTheme">
+      <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA10tpsEIzC6sxmXvc7XuvcDGgOLdgtiRQ" />
 
+      <!--
+      <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA10tpsEIzC6sxmXvc7XuvcDGgOLdgtiRQ" />
+      -->
       <provider android:name="androidx.core.content.FileProvider"
       android:authorities="${applicationId}.fileprovider"
       android:exported="false"
@@ -14,4 +18,16 @@
       
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+
+
+
 </manifest>

@@ -10,10 +10,13 @@
       "P1PG01/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
+          "Xam.Plugin.Connectivity": "3.2.0",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "5.0.1",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337",
+          "Xamarin.Forms.Maps": "5.0.0.2337",
           "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
@@ -110,9 +113,32 @@
           }
         }
       },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          },
+          "lib/netstandard1.0/Plugin.Connectivity.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "dependencies": {
-          "Xamarin.Essentials": "1.7.0"
+          "Xamarin.Essentials": "1.7.1"
         },
         "runtime": {
           "lib/netstandard2.0/Plugin.Media.dll": {
@@ -129,7 +155,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -140,19 +166,30 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2196": {
+      "Xamarin.Forms/5.0.0.2337": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.786"
+            "fileVersion": "5.0.0.884"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.786"
+            "fileVersion": "5.0.0.884"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.786"
+            "fileVersion": "5.0.0.884"
+          }
+        }
+      },
+      "Xamarin.Forms.Maps/5.0.0.2337": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2337"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.884"
           }
         }
       }
@@ -241,6 +278,20 @@
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "hashPath": "xam.plugin.connectivity.3.2.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "hashPath": "xam.plugin.geolocator.4.5.0.6.nupkg.sha512"
+    },
     "Xam.Plugin.Media/5.0.1": {
       "type": "package",
       "serviceable": true,
@@ -255,19 +306,26 @@
       "path": "xam.plugins.texttospeech/4.0.0.7",
       "hashPath": "xam.plugins.texttospeech.4.0.0.7.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.7.0": {
+    "Xamarin.Essentials/1.7.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
-      "path": "xamarin.essentials/1.7.0",
-      "hashPath": "xamarin.essentials.1.7.0.nupkg.sha512"
+      "sha512": "sha512-u7pUgvHJKTYo5ATiwRZvYviq2O0AQXIqxdna+sMxqidfWpbD7FBgFOLNAZzWKSll/AQBPeDrqLAWZNLq+ztpmQ==",
+      "path": "xamarin.essentials/1.7.1",
+      "hashPath": "xamarin.essentials.1.7.1.nupkg.sha512"
     },
-    "Xamarin.Forms/5.0.0.2196": {
+    "Xamarin.Forms/5.0.0.2337": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
-      "path": "xamarin.forms/5.0.0.2196",
-      "hashPath": "xamarin.forms.5.0.0.2196.nupkg.sha512"
+      "sha512": "sha512-2AYl2V1YHjEDEmA5d+aP382ielCKr8d/jo3zCgPSvLE/4Pw/em7pHBGmN3yZ/WzxIMV16f7wBfoFCHesMud0AA==",
+      "path": "xamarin.forms/5.0.0.2337",
+      "hashPath": "xamarin.forms.5.0.0.2337.nupkg.sha512"
+    },
+    "Xamarin.Forms.Maps/5.0.0.2337": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rg7ELf3Xfa5Rrz3Bbt3McTt0D4Chg8eGhLrbDmAlNdQWLYUFXypajLgDdgdUDthmGIUAMMdlH3JCA4zM3fLLug==",
+      "path": "xamarin.forms.maps/5.0.0.2337",
+      "hashPath": "xamarin.forms.maps.5.0.0.2337.nupkg.sha512"
     }
   }
 }

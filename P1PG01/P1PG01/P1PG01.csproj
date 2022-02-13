@@ -12,10 +12,13 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="Xam.Plugins.TextToSpeech" Version="4.0.0.7" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2337" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +28,13 @@
     <EmbeddedResource Update="Views\EmplePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\PageCreateEmple.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PageEcamples.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\PageTTS.xaml">

@@ -5,7 +5,17 @@
       "ProjectGuid": "eac0af2b-43ec-4011-9f89-1ffa38dd09cd",
       "DisplayName": "P1PG01",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "fe903a32-3b3e-4d35-90da-a19747df2a17": {
+      "ProjectGuid": "fe903a32-3b3e-4d35-90da-a19747df2a17",
+      "DisplayName": "P1PG01.Android",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

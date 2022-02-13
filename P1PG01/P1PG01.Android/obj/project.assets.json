@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v12.0": {
+      "Plugin.CurrentActivity/2.1.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        }
+      },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.CurrentActivity": "2.1.0.2",
+          "Xamarin.Android.Support.Compat": "25.4.0.2",
+          "Xamarin.Android.Support.Core.Utils": "25.4.0.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/Plugin.Permissions.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -104,6 +133,32 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "Xam.Plugin.Connectivity/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/MonoAndroid10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/MonoAndroid10/Plugin.Connectivity.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Permissions": "3.0.0.12"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -130,6 +185,45 @@
         },
         "runtime": {
           "lib/monoandroid71/Plugin.TextToSpeech.dll": {}
+        }
+      },
+      "Xamarin.Android.Support.Annotations/25.4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Annotations.dll": {}
+        }
+      },
+      "Xamarin.Android.Support.Compat/25.4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[25.4.0.2]"
+        },
+        "compile": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Compat.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Compat.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid70/_._": {}
+        }
+      },
+      "Xamarin.Android.Support.Core.Utils/25.4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Compat": "[25.4.0.2]"
+        },
+        "compile": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Core.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Core.Utils.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid70/_._": {}
         }
       },
       "Xamarin.AndroidX.Activity/1.2.4.1": {
@@ -1560,7 +1654,14 @@
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ViewPager2.targets": {}
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
+      "Xamarin.Essentials/1.7.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0",
@@ -1576,7 +1677,7 @@
           "lib/monoandroid10.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2196": {
+      "Xamarin.Forms/5.0.0.2337": {
         "type": "package",
         "dependencies": {
           "Xamarin.AndroidX.Browser": "[1.3.0.6, 1.4.0)",
@@ -1606,6 +1707,21 @@
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Forms.Maps/5.0.0.2337": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2337",
+          "Xamarin.GooglePlayServices.Maps": "117.0.0"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Xamarin.Forms.Maps.Android.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Xamarin.Forms.Maps.Android.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Maps.dll": {}
         }
       },
       "Xamarin.Google.Android.Material/1.4.0.2": {
@@ -1661,14 +1777,101 @@
           "buildTransitive/monoandroid50/Xamarin.Google.Guava.ListenableFuture.targets": {}
         }
       },
+      "Xamarin.GooglePlayServices.Base/117.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.1.0.1",
+          "Xamarin.AndroidX.Core": "1.2.0.1",
+          "Xamarin.AndroidX.Fragment": "1.1.0.1",
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.GooglePlayServices.Basement": "117.1.0",
+          "Xamarin.GooglePlayServices.Tasks": "117.0.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Base.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Base.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/117.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.1.0.1",
+          "Xamarin.AndroidX.Core": "1.2.0.1",
+          "Xamarin.AndroidX.Fragment": "1.1.0.1",
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Basement.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Basement.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/117.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.1.0.1",
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.GooglePlayServices.Base": "117.1.0",
+          "Xamarin.GooglePlayServices.Basement": "117.1.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Maps.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/117.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.GooglePlayServices.Basement": "117.1.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Tasks.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Tasks.targets": {}
+        }
+      },
       "P1PG01/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugin.Connectivity": "3.2.0",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "5.0.1",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337",
+          "Xamarin.Forms.Maps": "5.0.0.2337",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1681,6 +1884,43 @@
     }
   },
   "libraries": {
+    "Plugin.CurrentActivity/2.1.0.2": {
+      "sha512": "uiMbA0G1ulSEj7MtGUQDDhzw80+QgvH5ts+Yt9cyft1dF4Eb0tYxiXAgNPuohJXpxhZmRs+6ZjL6QBaL/wUKDQ==",
+      "type": "package",
+      "path": "plugin.currentactivity/2.1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Plugin.CurrentActivity.dll",
+        "lib/monoandroid44/Plugin.CurrentActivity.xml",
+        "plugin.currentactivity.2.1.0.2.nupkg.sha512",
+        "plugin.currentactivity.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "type": "package",
+      "path": "plugin.permissions/3.0.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
+      ]
+    },
     "sqlite-net-pcl/1.8.116": {
       "sha512": "W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
       "type": "package",
@@ -1869,6 +2109,100 @@
         "version.txt"
       ]
     },
+    "Xam.Plugin.Connectivity/3.2.0": {
+      "sha512": "ZV45TaBTCJg7XQNEl3fPyyJcuMMhdDEQ6BCLc/5pMuTv38M226ER0WTu5sbmba8jlliDuzeRqkRFHwrGdWAgyg==",
+      "type": "package",
+      "path": "xam.plugin.connectivity/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Connectivity.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.xml",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.xml",
+        "lib/UAP10/Plugin.Connectivity.XML",
+        "lib/UAP10/Plugin.Connectivity.dll",
+        "lib/UAP10/Plugin.Connectivity.pdb",
+        "lib/UAP10/Plugin.Connectivity.pri",
+        "lib/UAP10/Plugin.Connectivity/Properties/Plugin.Connectivity.rd.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.dll",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.pdb",
+        "lib/Xamarin.Mac20/Plugin.Connectivity.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.pdb",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.Abstractions.xml",
+        "lib/XamarinTVOS/Plugin.Connectivity.dll",
+        "lib/XamarinTVOS/Plugin.Connectivity.pdb",
+        "lib/XamarinTVOS/Plugin.Connectivity.xml",
+        "lib/net45/Plugin.Connectivity.Abstractions.dll",
+        "lib/net45/Plugin.Connectivity.Abstractions.pdb",
+        "lib/net45/Plugin.Connectivity.Abstractions.xml",
+        "lib/net45/Plugin.Connectivity.XML",
+        "lib/net45/Plugin.Connectivity.dll",
+        "lib/net45/Plugin.Connectivity.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netcoreapp2.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netcoreapp2.0/Plugin.Connectivity.deps.json",
+        "lib/netcoreapp2.0/Plugin.Connectivity.dll",
+        "lib/netcoreapp2.0/Plugin.Connectivity.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Connectivity.deps.json",
+        "lib/netstandard1.0/Plugin.Connectivity.dll",
+        "lib/netstandard1.0/Plugin.Connectivity.pdb",
+        "lib/netstandard1.0/Plugin.Connectivity.xml",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.dll",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.pdb",
+        "lib/tizen40/Plugin.Connectivity.Abstractions.xml",
+        "lib/tizen40/Plugin.Connectivity.deps.json",
+        "lib/tizen40/Plugin.Connectivity.dll",
+        "xam.plugin.connectivity.3.2.0.nupkg.sha512",
+        "xam.plugin.connectivity.nuspec"
+      ]
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
+      ]
+    },
     "Xam.Plugin.Media/5.0.1": {
       "sha512": "UUR31EEnhDVa4IXgVfQIAL3u9v6YAyppsb5UlO9MNJ4quGGkfcWX++JexjB1nMGqvCzsjAT2t32drKDIXoW4SQ==",
       "type": "package",
@@ -1933,6 +2267,47 @@
         "lib/xamarintvos10/Plugin.TextToSpeech.xml",
         "xam.plugins.texttospeech.4.0.0.7.nupkg.sha512",
         "xam.plugins.texttospeech.nuspec"
+      ]
+    },
+    "Xamarin.Android.Support.Annotations/25.4.0.2": {
+      "sha512": "4Gkj6OCOJO7jn4drGZxeCCaEVHOjUu0RzsEzZaAZJzrLNqEHqoYrKwIlbsecfEpjbAcyT77Sb8wkZnZNFPdlaA==",
+      "type": "package",
+      "path": "xamarin.android.support.annotations/25.4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/MonoAndroid70/Xamarin.Android.Support.Annotations.dll",
+        "xamarin.android.support.annotations.25.4.0.2.nupkg.sha512",
+        "xamarin.android.support.annotations.nuspec"
+      ]
+    },
+    "Xamarin.Android.Support.Compat/25.4.0.2": {
+      "sha512": "k+bZ2ArXV7x1U5xomEiCVRoWHAWr6VKhF6Ziqd1DdK4ZZ4W+J0Dsi5oR2QcQHhIodb7j7cfuDcBAEs0KYvOmuQ==",
+      "type": "package",
+      "path": "xamarin.android.support.compat/25.4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/MonoAndroid70/Xamarin.Android.Support.Compat.targets",
+        "lib/MonoAndroid70/Xamarin.Android.Support.Compat.dll",
+        "xamarin.android.support.compat.25.4.0.2.nupkg.sha512",
+        "xamarin.android.support.compat.nuspec"
+      ]
+    },
+    "Xamarin.Android.Support.Core.Utils/25.4.0.2": {
+      "sha512": "ZF+yk8b1WVRfgmf3MNeUOVdd9Bq3EoIYsXjCW2sAouwbNsnPKyjwL91mYyVcoT5f8Sf0SL866GnBtRi14wQesQ==",
+      "type": "package",
+      "path": "xamarin.android.support.core.utils/25.4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/MonoAndroid70/Xamarin.Android.Support.Core.Utils.targets",
+        "lib/MonoAndroid70/Xamarin.Android.Support.Core.Utils.dll",
+        "xamarin.android.support.core.utils.25.4.0.2.nupkg.sha512",
+        "xamarin.android.support.core.utils.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.2.4.1": {
@@ -3190,10 +3565,32 @@
         "xamarin.androidx.viewpager2.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.7.0": {
-      "sha512": "xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
+    "Xamarin.Build.Download/0.10.0": {
+      "sha512": "XiQNxx6Jox00O80sJRlZv6jXDZ/r3KC7SMwzQNQcD1gZ+vsZyJH3LcSpdJ5NiZhRrWZlTGNSbooHsOBF7lBOyQ==",
       "type": "package",
-      "path": "xamarin.essentials/1.7.0",
+      "path": "xamarin.build.download/0.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.10.0.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
+    "Xamarin.Essentials/1.7.1": {
+      "sha512": "u7pUgvHJKTYo5ATiwRZvYviq2O0AQXIqxdna+sMxqidfWpbD7FBgFOLNAZzWKSll/AQBPeDrqLAWZNLq+ztpmQ==",
+      "type": "package",
+      "path": "xamarin.essentials/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3228,14 +3625,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.7.0.nupkg.sha512",
+        "xamarin.essentials.1.7.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2196": {
-      "sha512": "zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
+    "Xamarin.Forms/5.0.0.2337": {
+      "sha512": "2AYl2V1YHjEDEmA5d+aP382ielCKr8d/jo3zCgPSvLE/4Pw/em7pHBGmN3yZ/WzxIMV16f7wBfoFCHesMud0AA==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2196",
+      "path": "xamarin.forms/5.0.0.2337",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3444,8 +3841,42 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2196.nupkg.sha512",
+        "xamarin.forms.5.0.0.2337.nupkg.sha512",
         "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Forms.Maps/5.0.0.2337": {
+      "sha512": "rg7ELf3Xfa5Rrz3Bbt3McTt0D4Chg8eGhLrbDmAlNdQWLYUFXypajLgDdgdUDthmGIUAMMdlH3JCA4zM3fLLug==",
+      "type": "package",
+      "path": "xamarin.forms.maps/5.0.0.2337",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.5.0.0.2337.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
       ]
     },
     "Xamarin.Google.Android.Material/1.4.0.2": {
@@ -3489,6 +3920,65 @@
         "xamarin.google.guava.listenablefuture.nuspec"
       ]
     },
+    "Xamarin.GooglePlayServices.Base/117.1.0": {
+      "sha512": "zn8MgkTImMHmvZl9RrUWLMXpGeMFwcb0zIqT9uqfE5DkHs+Pmc3RJ/QxVzFT3MFnmKdy2vuhD+JBVvlI3dV5QQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.base/117.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Base.targets",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Base.dll",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Base.pdb",
+        "proguard/MonoAndroid90/proguard.txt",
+        "xamarin.googleplayservices.base.117.1.0.nupkg.sha512",
+        "xamarin.googleplayservices.base.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Basement/117.1.0": {
+      "sha512": "NE6SsE0wqaxlqPKjrPPeGr+sVT840q4Rg7MdkgbwhP4u/umbTUJwz5TvsM+iRXBUnYlvYNJCaUKploLsYDjFjg==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.basement/117.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Basement.targets",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Basement.dll",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Basement.pdb",
+        "proguard/MonoAndroid90/proguard.txt",
+        "xamarin.googleplayservices.basement.117.1.0.nupkg.sha512",
+        "xamarin.googleplayservices.basement.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Maps/117.0.0": {
+      "sha512": "gq7hPOhQcjWxQ51eGzpjt0zR8QJneYxXUQk1iPyEAIcuVNtH44hjv0AIUmEcusxyKoFPafZSiSBDyZGCU2vU2w==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.maps/117.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Maps.targets",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Maps.dll",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Maps.pdb",
+        "xamarin.googleplayservices.maps.117.0.0.nupkg.sha512",
+        "xamarin.googleplayservices.maps.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Tasks/117.0.0": {
+      "sha512": "YESL35YWx58bCVqpU2pcwdipG0L/6CgIvUkrSh8gR6RPWgSM1vVAYKZLRYMCkMsW6/v0XzAmRWGE2YRgt50tew==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.tasks/117.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Tasks.pdb",
+        "xamarin.googleplayservices.tasks.117.0.0.nupkg.sha512",
+        "xamarin.googleplayservices.tasks.nuspec"
+      ]
+    },
     "P1PG01/1.0.0": {
       "type": "project",
       "path": "../P1PG01/P1PG01.csproj",
@@ -3498,10 +3988,13 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v12.0": [
       "P1PG01 >= 1.0.0",
+      "Xam.Plugin.Connectivity >= 3.2.0",
+      "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xam.Plugin.Media >= 5.0.1",
       "Xam.Plugins.TextToSpeech >= 4.0.0.7",
-      "Xamarin.Essentials >= 1.7.0",
-      "Xamarin.Forms >= 5.0.0.2196",
+      "Xamarin.Essentials >= 1.7.1",
+      "Xamarin.Forms >= 5.0.0.2337",
+      "Xamarin.Forms.Maps >= 5.0.0.2337",
       "sqlite-net-pcl >= 1.8.116"
     ]
   },
@@ -3547,6 +4040,14 @@
     "frameworks": {
       "monoandroid12.0": {
         "dependencies": {
+          "Xam.Plugin.Connectivity": {
+            "target": "Package",
+            "version": "[3.2.0, )"
+          },
+          "Xam.Plugin.Geolocator": {
+            "target": "Package",
+            "version": "[4.5.0.6, )"
+          },
           "Xam.Plugin.Media": {
             "target": "Package",
             "version": "[5.0.1, )"
@@ -3557,11 +4058,15 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.7.0, )"
+            "version": "[1.7.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2196, )"
+            "version": "[5.0.0.2337, )"
+          },
+          "Xamarin.Forms.Maps": {
+            "target": "Package",
+            "version": "[5.0.0.2337, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
