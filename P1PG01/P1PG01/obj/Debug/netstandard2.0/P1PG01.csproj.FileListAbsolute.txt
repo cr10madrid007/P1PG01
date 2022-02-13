@@ -19,4 +19,3 @@ C:\Users\crist\source\repos\P1PG01\P1PG01\P1PG01\obj\Debug\netstandard2.0\Views\
 C:\Users\crist\source\repos\P1PG01\P1PG01\P1PG01\obj\Debug\netstandard2.0\Views\PageTTS.xaml.g.cs
 C:\Users\crist\source\repos\P1PG01\P1PG01\P1PG01\obj\Debug\netstandard2.0\Views\PhotoPage.xaml.g.cs
 C:\Users\crist\source\repos\P1PG01\P1PG01\P1PG01\obj\Debug\netstandard2.0\Views\MapPage.xaml.g.cs
-C:\Users\crist\source\repos\P1PG01\P1PG01\P1PG01\obj\Debug\netstandard2.0\Views\PageEcamples.xaml.g.cs

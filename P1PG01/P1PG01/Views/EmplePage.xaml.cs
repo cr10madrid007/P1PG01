@@ -57,5 +57,13 @@ namespace P1PG01.Views
             var newpage = new Views.MapPage();
             await Navigation.PushAsync(newpage);
         }
+
+       
+
+        private async void ToolbarItem_Clicked_5(object sender, EventArgs e)
+        {
+            var newpage = new MainPage();
+            await Navigation.PushAsync(newpage);
+        }
     }
 }

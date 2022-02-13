@@ -15,7 +15,7 @@
             <Label Text="Volumen" />
             <Slider x:Name="SldVolumen" Minimum="0" Maximum="10" Value="2"/>
             
-            <Editor x:Name="txtnota" Text="This Editor is used to collecting text that is expected hello world" />
+            <Editor x:Name="txtnota" Text="Este es el texto que leerá el programa :)" />
 
             <Button x:Name="btnspeed" Text="Texto a voz Implementacion 1" Clicked="btnspeed_Clicked" />
             <Button x:Name="btnspeed1" Text="Texto a voz Implementacion 2" Clicked="btnspeed1_Clicked" />

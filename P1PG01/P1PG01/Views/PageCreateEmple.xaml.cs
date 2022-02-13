@@ -41,8 +41,45 @@ namespace P1PG01.Views
 
        
 
-        private void btnBorrar_Clicked(object sender, EventArgs e)
+        private async void btnBorrar_Clicked(object sender, EventArgs e)
         {
+            var emple = new Empleados
+            {
+                codigo = Convert.ToInt32(Codigo.Text)
+            };
+            var resultado = await App.BaseDatos.EmpleadoBorrar(emple);
+            if (resultado != 0)
+            {
+                await DisplayAlert("Aviso", "Empleado Borrado con exito!!", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Aviso", "Error!!", "OK");
+            }
+            await Navigation.PopAsync();
+        }
+
+        private async void btnActualizar_Clicked(object sender, EventArgs e)
+        {
+            var emple = new Empleados
+            {   
+                codigo = Convert.ToInt32(Codigo.Text),
+                nombres = Nombres.Text,
+                apellidos = Apellidos.Text,
+                edad = Convert.ToInt32(Edad.Text),
+                fecha_nac = Fecha.Date,
+                ocupacion = Ocupacion.Text
+            };
+            var resultado = await App.BaseDatos.EmpleadoGuardar(emple);
+            if (resultado != 0)
+            {
+                await DisplayAlert("Aviso", "Empleado Actualizado con exito!!", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Aviso", "Error!!", "OK");
+            }
+            await Navigation.PopAsync();
 
         }
     }

@@ -13,12 +13,15 @@
 
             <Grid ColumnDefinitions="*,*">
                 <Button x:Name="btnAgregar" Text="Agregar" Clicked="btnAgregar_Clicked" />
-                <Button Grid.Column="1" x:Name="btnBorrar" Text="Borrar" Clicked="btnBorrar_Clicked" />
+                <Button Grid.Column="1" x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" />
+                
                 
             </Grid>
 
+            <Button  x:Name="btnBorrar" Text="Borrar" Clicked="btnBorrar_Clicked" />
 
-            
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

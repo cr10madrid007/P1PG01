@@ -12,9 +12,12 @@
 
         <ToolbarItem Text="Voz"
                      Clicked="ToolbarItem_Clicked_2"/>
-        
+
         <ToolbarItem Text="Maps"
                      Clicked="ToolbarItem_Clicked_3" />
+
+        <ToolbarItem Text="Pagina 2"
+                     Clicked="ToolbarItem_Clicked_5" />
     </ContentPage.ToolbarItems>
     
     
